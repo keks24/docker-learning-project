@@ -1,0 +1,18 @@
+# Syntax
+#
+# The .dockerignore file is a newline-separated list of patterns similar to the file globs of Unix shells.
+# Leading and trailing slashes in ignore patterns are disregarded.
+# The following patterns all exclude a file or directory named bar in the subdirectory foo under the root of the build context:
+#
+#     /foo/bar/
+#     /foo/bar
+#     foo/bar/
+#     foo/bar
+#
+
+# ignore the files "Dockerfile" and ".dockerignore", so they cannot be copied to images via "COPY" OR "ADD".
+Dockerfile
+.dockerignore
+
+# ignore the directory ".git"
+.git

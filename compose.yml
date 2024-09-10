@@ -1,0 +1,15 @@
+#name: "nom"
+services:
+  webserver:
+    build:
+      context: "."
+    ports:
+      - "127.0.0.1:8085:80"
+  webserver2:
+    build:
+      context: "."
+      target: "apache"
+    ports:
+      - "127.0.0.1:8086:80"
+    volumes:
+      - "./:/usr/share/nginx/html/"
