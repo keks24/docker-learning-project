@@ -1,0 +1,13 @@
+name: GitHub CI pipeline
+
+on:
+  push:
+    branches: ["*"]
+
+jobs:
+  Build-with-Docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          docker build .
