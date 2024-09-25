@@ -4,3 +4,4 @@ build:
     - docker:24.0.5-dind
   script:
     - docker info
+    - docker build .
