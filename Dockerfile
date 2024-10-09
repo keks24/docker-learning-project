@@ -16,7 +16,6 @@
 
 FROM debian:bookworm-slim AS builder
     ARG DEBIAN_FRONTEND="noninteractive"
-    # cache busting: always install latest packages
     RUN apt-get update && \
         apt-get install --no-install-recommends --assume-yes \
             pandoc && \
